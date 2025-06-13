@@ -2,20 +2,18 @@
 apache airflow examples
 
 
-# install airflow with minikube and helm
-1. minikube start --vm-driver=hyperkit --cpus 6 --memory 8192
-2. kubectl create namespace airflow
-3. helm install airflow apache-airflow/airflow --namespace airflow --set executor=LocalExecutor --set redis.enabled=false
-4. kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
+# install airflow with uv tool on mac
+1. brew install uv
+2. create folder in ~/ directory: mkdir airflow 
+3. uv venv --python 3.11
+4. source .venv/bin/activate
+5. uv pip install "apache-airflow==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.11.txt"
+6. start : airflow standalone
 
 
 # airflow access
 1. UI : http://localhost:8080 
 
-
-# uninstall 
-1. helm uninstall airflow -n airflow
-2. minikube delete
 
 
 # for local development

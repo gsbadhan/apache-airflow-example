@@ -20,7 +20,7 @@ with DAG(
     dag_id='add_two_numbers',
     default_args=default_args,
     description='A simple DAG to add two numbers',
-    schedule_interval=None,  # Manual trigger only
+    schedule=None,  # Manual trigger only
     catchup=False,
     tags=['example'],
 ) as dag:
