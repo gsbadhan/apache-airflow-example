@@ -9,14 +9,17 @@ apache airflow examples
 4. source .venv/bin/activate
 5. uv pip install "apache-airflow==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.11.txt"
 6. start : airflow standalone
+7. create dags folder in ~/airflow/ directory if not created by default : mkdir dags
 
 
 # airflow access
 1. UI : http://localhost:8080 
 
 
+# how to deploy airflow code
+1. Write DAG code(.py) in any IDE
+2. Copy/Paste same DAG code(.py) file into ~/airflow/dags folder
+3. Airflow automattically load new code, you can cross verify on airflow UI
 
-# for local development
-1. Create folder venv : python -m venv venv
-2. Activate the virtual environment on mac : source venv/bin/activate
-3. Install dependencies : pip install -r requirements.txt
+
+
