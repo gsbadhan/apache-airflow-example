@@ -45,7 +45,7 @@ def sub_numbers(**context):
 # Default arguments for the DAG
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 1, 1),
+    'start_date': datetime(2025, 1, 1),
     'retries': 1,
 }
 
